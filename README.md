@@ -9,4 +9,4 @@ Collects module parameters from query string, concats them and serves in one way
 
 Here you are! `localhost:3000` is now listening your requests.
 
-if you enter url eg. as `http://localhost:3000/styles?module=header,navigation,search` you'll get a css response which includes header.css + navigation.css + search.css
+if you enter url `http://localhost:3000/styles?module=header,navigation,search` you'll get a css response which includes header.css + navigation.css + search.css
