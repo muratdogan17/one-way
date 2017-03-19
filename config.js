@@ -1,5 +1,6 @@
 const path = {
-  styles : "./public/css"
+    styles: "./public/css",
+    scripts: "./public/js"
 };
 
 module.exports = path;

@@ -6,6 +6,7 @@ let express = require('express'),
     bodyParser = require('body-parser'),
     routes = require('./routes/index'),
     styles = require('./routes/styles'),
+    scripts = require('./routes/scripts'),
     app = express(),
     env = process.env.NODE_ENV || 'development';
 
@@ -28,6 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/styles', styles);
+app.use('/scripts', scripts);
 
 /// catch 404 and forward to error handler
 app.use(function (req, res, next) {

@@ -3,7 +3,7 @@
 const express = require('express'),
     router = express.Router(),
     fs = require('fs'),
-    styleFolder = require("../config").styles;
+    scriptFolder = require("../config").scripts;
 
 /* GET home page. */
 
@@ -16,11 +16,11 @@ router.get('/', function (req, res) {
 
 
         _queries.forEach(file => {
-            _spreadStyle += fs.readFileSync(`${styleFolder}/${file}.css`).toString();
+            _spreadStyle += fs.readFileSync(`${scriptFolder}/${file}.js`).toString();
         });
-        res.writeHead(200, {"Content-Type": "text/css"});
+        res.writeHead(200, {"Content-Type": "text/javascript"});
         res.end(_spreadStyle.replace(/(\r\n|\n|\r)/gm, ""));
-    }  else {
+    } else {
         res.render('error', {title: 'Hürriyet', message : 'Modüller bulunamadı', error : { status: '404'}});
     }
 });
